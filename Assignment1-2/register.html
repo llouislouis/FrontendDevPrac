@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="register.js"></script>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: salmon;
+      }
+      header {
+        background-color: #333;
+        color: white;
+        text-align: center;
+        padding: 20px 0;
+      }
+      .container {
+        max-width: 800px;
+        margin: auto;
+        padding: 20px;
+        background-color: #ececec;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+      }
+      form label {
+        display: block;
+        margin-top: 10px;
+        font-weight: bold;
+      }
+      input[type="text"],
+      input[type="number"],
+      input[type="tel"],
+      select {
+        width: 100%;
+        padding: 8px;
+        margin: 8px 0px;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+      }
+      input[type="checkbox"] {
+        margin-right: 5px;
+      }
+      input[type="submit"] {
+        background-color: #7a3ef5; /* สีม่วงเข้ม */
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      input[type="submit"]:hover {
+        background-color: #6a2df4; /* สีม่วงเข้ม (เมื่อ hover) */
+      }
+      a {
+        color: #333;
+        text-decoration: none;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 style="margin-left: 10px; color: white">
+      ลงทะเบียนเช่าพื้นที่แสดงสินค้า
+    </h1>
+    <div class="container">
+      <h2>กรุณากรอกข้อมูลการลงทะเบียน</h2>
+      <form action="submit_registration.php" method="post">
+        <label for="companyName">ชื่อบริษัท:</label>
+        <input
+          type="text"
+          id="companyName"
+          name="companyName"
+          placeholder="ขื่อบริษัท"
+        />
+
+        <label for="boothSize">ขนาดบูธ:</label>
+        <select id="boothSize" name="boothSize">
+          <option value="10x10">10x10 ฟุต</option>
+          <option value="10x15">10x15 ฟุต</option>
+        </select>
+
+        <label>ต้องการโต๊ะตั้งในบูธ:</label>
+        <input type="checkbox" id="tableRequired" name="tableRequired" />
+
+        <label for="numChairs">จำนวนเก้าอี้:</label>
+        <input
+          type="number"
+          id="numChairs"
+          name="numChairs"
+          min="1"
+          max="10"
+          placeholder="จำนวนเก้าอี้"
+        />
+
+        <label for="contactName">ชื่อผู้ติดต่อ:</label>
+        <input
+          type="text"
+          id="contactName"
+          name="contactName"
+          placeholder="ชื่อผู้ติดต่อ"
+        />
+
+        <label for="contactNumber">เบอร์ผู้ติดต่อ:</label>
+        <input
+          type="tel"
+          id="contactNumber"
+          name="contactNumber"
+          placeholder="เบอร์ผู้ติดต่อ"
+        /><br /><br />
+
+        <input type="submit" value="ลงทะเบียน" />
+      </form>
+    </div>
+  </body>
+</html>
